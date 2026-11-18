@@ -6,7 +6,7 @@ Fundy links to a user's bank account, rounds each card payment up to the next eu
 
 **EPITECH Innovative Project (EIP), 2020–2023**, built by a team of students. This repository is a cleaned-up portfolio copy of the original team repositories: same code, with secrets moved to environment variables and a static demo mode added.
 
-**▶ Live demo:** _coming soon_ — runs entirely in the browser on fake data, nothing is charged. Log in with `demo@demo.com` / `test1234` (pre-filled).
+**▶ Live demo: [fundy.cyrildelajudie.fr](https://fundy.cyrildelajudie.fr)** — runs entirely in the browser on fake data, nothing is charged. Log in with `demo@demo.com` / `test1234` (pre-filled).
 
 | Home | Project | Mobile width |
 |---|---|---|
@@ -71,9 +71,17 @@ npm run start:dev                    # http://localhost:8000
 
 ## Team
 
-<!-- TODO: list the team and your own contributions before publishing -->
-- **TODO: your name** — TODO: what you built
-- TODO: teammates
+Built over 5 sprints (2021–2023) by a team of EPITECH students. The [project history](docs/PROJECT_HISTORY.md) covers the timeline, the key technical decisions and how the team worked.
+
+| Member | Main contributions |
+|---|---|
+| **Cyril de Lajudie** ([@Axoloot](https://github.com/Axoloot)) | **DevOps and mobile.** CI/CD pipelines for every app (build, test, deploy with GitHub Actions); production setup (Docker Compose, nginx, domain and TLS), first on DigitalOcean, then migrated to Azure to cut hosting costs; monitoring with Prometheus, Grafana and Loki. Main contributor to the mobile app: sign-up, push notifications, Nordigen bank linking, in-app tutorial, Firebase analytics, Jest tests and linting. On the backend: round-up cron, transaction notifications, HTTPS server. |
+| **Vincent Lemesle** | **Backend lead.** Most of the API: auth and partner (B2B) auth, bank accounts and the round-up system with Nordigen and Stripe, card payments, password reset, featured projects, error handling with translation keys, API test suite. Also built the partner dashboard features. |
+| **Antoine Famibelle** | **Web app lead.** UX/UI redesign and v3 mockups, responsive layout, translations (FR / EN / ES), web CI and usage metrics, landing page. |
+| **Jérémy Groizard** | **Web app.** v3 interface, association actions feed, card donations, UI component library, tests. |
+| **Grégoire Brasseur** | **Mobile app and design.** Dark mode, languages, association pages, card donations and donation history, animations, UI consistency between web and mobile, tests. |
+| **Laurane Sevin** | **Partner dashboard and backend.** Dashboard mockups and implementation (association and project management), partner auth with Vincent, test environment. |
+| **Robin Christol** | **Backend** in the early sprints. |
 
 ## License
 
