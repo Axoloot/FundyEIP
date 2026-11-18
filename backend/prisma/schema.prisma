@@ -1,0 +1,198 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                      String        @id @default(cuid())
+  email                   String        @unique(map: "User.email_unique")
+  password                String
+  lastname                String
+  firstname               String
+  passwordResetToken      String?
+  piggyBank               Int           @default(0)
+  isVerified              Boolean       @default(false)
+  paypalAccessToken       String?
+  paypalRefreshToken      String?
+  paypalLastRefresh       DateTime?
+  trueLayerAccessToken    String?
+  trueLayerLastRefresh    DateTime?
+  deviceNotificationToken String?
+  updatedAt               DateTime      @updatedAt
+  createdAt               DateTime      @default(now())
+  lang                    String        @default("en")
+  profilePicture          String        @default("")
+  roundedTo               Decimal       @default(0.5)
+  stripeCustomerId        String
+  darkMode                Boolean       @default(true)
+  nordigenRequisitions    String[]
+  type                    UserType
+  FollowedAssociation     Association[] @relation("UserALike")
+  bankAccounts            BankAccount[]
+  pg                      PiggyBank?
+  FollowedProjects        Project[]     @relation("UserPLike")
+  Transactions            Transaction[]
+  Donations               Donation[]
+  OnwedAssociations       Association[] @relation("UserAOwner")
+  OwnedProjects           Project[]     @relation("UserPOwner")
+}
+
+model BankAccount {
+  id                   String            @id @default(cuid())
+  accountId            String
+  requisitionId        String
+  status               BankAccountStatus
+  userId               String
+  updatedAt            DateTime          @updatedAt
+  createdAt            DateTime          @default(now())
+  iban                 String
+  institution          String
+  numberOfTransactions Int               @default(0)
+  user                 User              @relation(fields: [userId], references: [id], onDelete: SetNull)
+  transactions         Transaction[]
+}
+
+model Transaction {
+  id            String      @id @default(cuid())
+  userId        String
+  amount        Int
+  initialAmount Int
+  processed     Boolean     @default(false)
+  updatedAt     DateTime    @updatedAt
+  createdAt     DateTime    @default(now())
+  bankAccountId String
+  roundAmount   Int
+  bankAccount   BankAccount @relation(fields: [bankAccountId], references: [id], onDelete: Cascade)
+  user          User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model PiggyBank {
+  id               String             @id @default(cuid())
+  amount           Int                @default(0)
+  userId           String             @unique(map: "PiggyBank_userId_unique")
+  updatedAt        DateTime           @updatedAt
+  createdAt        DateTime           @default(now())
+  user             User               @relation(fields: [userId], references: [id], onDelete: Cascade)
+  PiggyTransaction PiggyTransaction[]
+}
+
+model PiggyTransaction {
+  id          String    @id @default(cuid())
+  amount      Int
+  piggyBankId String
+  updatedAt   DateTime  @updatedAt
+  createdAt   DateTime  @default(now())
+  piggyBank   PiggyBank @relation(fields: [piggyBankId], references: [id], onDelete: Cascade)
+}
+
+model Donation {
+  id              String        @id @default(cuid())
+  amount          Int
+  User            User          @relation(fields: [userId], references: [id])
+  userId          String
+  Project         Project?      @relation(fields: [projectId], references: [id])
+  projectId       String?
+  Association     Association?  @relation(fields: [associationId], references: [id])
+  associationId   String?
+  type            String?
+  createdAt       DateTime       @default(now())
+}
+
+model Action {
+  id              String         @id @default(cuid())
+  title           String
+  description     String
+  image           String
+  Project         Project?       @relation(fields: [projectId], references: [id])
+  projectId       String?
+  Association     Association?   @relation(fields: [associationId], references: [id])
+  associationId   String?
+  createdAt       DateTime       @default(now())
+}
+
+model Association {
+  id              String   @id @default(cuid())
+  email           String   @unique(map: "Association.email_unique")
+  name            String
+  isVerified      Boolean  @default(false)
+  description     String
+  updatedAt       DateTime @updatedAt
+  createdAt       DateTime @default(now())
+  userId          String?
+  raisedCurrently Int      @default(0)
+  tags            String[]
+  latitude        Decimal
+  longitude       Decimal
+  title           String
+  image           String
+  User            User? @relation("UserALike", fields: [userId], references: [id])
+  Pots            Pot[]
+  Actions         Action[]
+  Donations       Donation[]
+  ownerId         String?
+  Owner           User?    @relation("UserAOwner", fields: [ownerId], references: [id])
+}
+
+model Project {
+  id               String         @id @default(cuid())
+  email            String         @unique(map: "Project.email_unique")
+  name             String
+  title            String
+  isVerified       Boolean        @default(false)
+  description      String
+  goal             Int
+  raisedPercentage Int            @default(0)
+  raisedCurrently  Int            @default(0)
+  image            String?
+  updatedAt        DateTime       @updatedAt
+  createdAt        DateTime       @default(now())
+  userId           String?
+  tags             String[]
+  latitude         Decimal
+  longitude        Decimal
+  User             User?          @relation("UserPLike", fields: [userId], references: [id])
+  DonationGoal     DonationGoal[]
+  Pot              Pot?
+  Actions          Action[]
+  Donations        Donation[]
+  ownerId          String?
+  Owner            User?    @relation("UserPOwner", fields: [ownerId], references: [id])
+}
+
+model DonationGoal {
+  id          String   @id @default(cuid())
+  name        String
+  amount      Int
+  description String
+  projectId   String
+  updatedAt   DateTime @updatedAt
+  createdAt   DateTime @default(now())
+  project     Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+}
+
+model Pot {
+  id            String       @id @default(cuid())
+  amount        Int
+  name          String
+  description   String
+  projectId     String?      @unique(map: "Pot_projectId_unique")
+  associationId String?
+  updatedAt     DateTime     @updatedAt
+  createdAt     DateTime     @default(now())
+  association   Association? @relation(fields: [associationId], references: [id])
+  project       Project?     @relation(fields: [projectId], references: [id])
+}
+
+enum UserType {
+  PARTNER
+  CUSTOMER
+}
+
+enum BankAccountStatus {
+  ACTIVE
+  DISABLED
+}

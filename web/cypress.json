@@ -1,0 +1,19 @@
+{
+  "projectId": "nvw1kz",
+  "baseUrl": "http://localhost:3000/",
+  "experimentalSessionSupport": false,
+  "viewportWidth": 1920,
+  "viewportHeight": 1080,
+  "env": {
+    "auth": {
+      "register": "/register",
+      "login": "/"
+    },
+    "api": {
+      "baseUrl": "http://localhost:8000/",
+      "auth": {
+        "login": "auth/signin"
+      }
+    }
+  }
+}

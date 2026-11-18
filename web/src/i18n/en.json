@@ -1,0 +1,115 @@
+{
+  "account": {
+    "NumberOfAccount": "Number of account",
+    "YouDontHaveAccount": "You don't have any account linked to your Fundy account",
+    "addAccount": "Add an account",
+    "disable": "Disable",
+    "enable": "Enable",
+    "state_disable": "Disable",
+    "state_enable": "Enable",
+    "title": "My accounts"
+  },
+  "commons": {
+    "associations": "Associations",
+    "back": "Back",
+    "loading": "Loading...",
+    "logout": "Logout",
+    "mail_sent": "Mail sent",
+    "no_content": "No content",
+    "project": "Projets",
+    "welcome": "Welcome"
+  },
+  "editprofil": {
+    "cancel": "cancel",
+    "description": "To update your profile, please fill in the following fields.",
+    "email": "Email",
+    "firstname": "Firstnam",
+    "lastname": "Lastname",
+    "password": "Password",
+    "password_confirmation": "Password confirmation",
+    "submit": "Update your profil",
+    "title": "Update your profil"
+  },
+  "errors": {
+    "exist": {
+      "email": "This email already exists"
+    },
+    "invalid": {
+      "email": "This email is invalid",
+      "emailorpassword": "Email or password invalid",
+      "identical": "The two passwords are not identical",
+      "password": "The password is invalid"
+    },
+    "required": {
+      "email": "Email is required",
+      "lastname": "Lastname is required",
+      "name": "Name is required",
+      "password": "Password is required"
+    }
+  },
+  "favoris": {
+    "title": "My favorites"
+  },
+  "forgot": {
+    "decription": "To reset your password, please fill in the following fields.",
+    "no_account": "No account ?",
+    "send_email": "Send email",
+    "sign_up": "Sign up",
+    "want_to_log": "Want to log in ?"
+  },
+  "home": {
+    "asso_description": "We are putting spotlight on associations that are doing great work. Each associations is verified by our team and we check what they are doing with the money that you give !",
+    "crowdfunding": "The crowdfunding",
+    "description": "Fundy is a crowdfunding platform that allows you to finance your projects and to support the projects of others.",
+    "link_account": "Link your bank account",
+    "link_account_description": "To be able to make donations, you must link your bank account to your Fundy account. Here is a video on how to do it.",
+    "no_project_found": "No project found",
+    "objectif": "Our goal is to help you to finance your projects and to support the projects of others.",
+    "rounded": "rounded",
+    "we_are": "We are",
+    "who_are_we": "What is Fundy ?"
+  },
+  "login": {
+    "description": "To access your account, please fill log in your account.",
+    "donthaveaccount": "Don't have an account ?",
+    "email": "Email",
+    "forgot_password": "Forgot your password ?",
+    "password": "Password",
+    "register": "Register",
+    "signup": "Sign up",
+    "submit": "Log in",
+    "welcome_back": "Welcome back !"
+  },
+  "navbar": {
+    "associations": "Associations",
+    "clearTheme": "Clear theme",
+    "darkTheme": "Dark theme",
+    "favoris": "Favoris",
+    "home": "Home",
+    "logout": "Logout",
+    "myprofil": "My profil",
+    "profile": "Profile",
+    "projects": "Projets",
+    "seeTransactions": "See transactions",
+    "seeDonations": "See donations",
+    "settings": "Settings",
+    "wallet": "Wallet"
+  },
+  "register": {
+    "already_have_an_account": "Already have an account ?",
+    "alreadyhaveaccount": "Already have an account ?",
+    "description": "To access to Fundy, please create an account !",
+    "email": "Email",
+    "firstname": "Firstname",
+    "lastname": "Lastname",
+    "login": "Log in",
+    "password": "Password",
+    "password_confirmation": "Password confirmation",
+    "submit": "Register",
+    "title": "Register",
+    "welcome": "Welcome"
+  },
+  "success": {
+    "login": "You are now logged in !"
+  }
+}

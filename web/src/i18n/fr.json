@@ -1,0 +1,173 @@
+{
+  "account": {
+    "NumberOfAccount": "Nombre de compte :",
+    "YouDontHaveAccount": "Vous n'avez pas encore de compte banquaire.",
+    "addAccount": "Ajouter un compte",
+    "disable": "D\u00e9sactiver",
+    "enable": "Activer",
+    "state_disable": "Etat: D\u00e9saciver",
+    "state_enable": "Etat: Activer",
+    "title": "Mes comptes"
+  },
+  "commons": {
+    "add_to_favorite": "Ajouter au favoris",
+    "amount_in_euro": "Montant en euros",
+    "amount_to_donate": "Combien souhaitez vous donner ?",
+    "associations": "Associations",
+    "back": "Retour",
+    "bank_account_error_add": "Une erreur est arriv\u00e9, votre compte bancaire n'a pas pu \u00eatre ajouter.",
+    "bank_account_sucess_add": "Votre compte bancaire a \u00e9t\u00e9 li\u00e9 avec succes",
+    "credit_card": "Payer par Carte de cr\u00e9dit",
+    "goal": "Objectif :",
+    "last_actions": "Les derni\u00e8res actions men\u00e9es",
+    "loading": "Chargement...",
+    "logout": "D\u00e9connexion",
+    "mail_sent": "Mail envoy\u00e9",
+    "make_a_donation": "Faire un don",
+    "make_a_donation_2": "Utilser la cagnotte",
+    "no_content": "Aucun contenu",
+    "project": "Projets",
+    "project_creator": "Cr\u00e9ateur du projet :",
+    "remove_from_favorite": "Retirer des favoris",
+    "save": "Sauvegarder",
+    "see_same_project": "Voir des projets similaires",
+    "verified": "V\u00e9rifi\u00e9",
+    "welcome": "Bienvenue",
+    "your_amount": "Votre cagnotte :"
+  },
+  "editprofil": {
+    "add_bank_account": "Ajouter un compte bancaire",
+    "cancel": "Annuler",
+    "description": "Pour modifier votre profil, veuillez remplir les champs ci-dessous.",
+    "email": "Email",
+    "firstname": "Pr\u00e9nom",
+    "lastname": "Nom de famille",
+    "maximum_rounding": "Arrondi maximum (en centimes) :",
+    "password": "Mot de passe",
+    "password_confirmation": "Confirmation du mot de passe",
+    "see_bank_account": "Voir mes comptes bancaires",
+    "submit": "Modifier mon profil",
+    "title": "Mon profil"
+  },
+  "errors": {
+    "exist": {
+      "email": "Cette adresse email est d\u00e9j\u00e0 utilis\u00e9"
+    },
+    "invalid": {
+      "email": "Le champ email doit \u00eatre une adresse email valide",
+      "emailorpassword": "L'email ou le mot de passe est invalide",
+      "identical": "Les mots de passe ne sont pas identiques",
+      "password": "Le mot de passe doit contenir au moins 8 caract\u00e8res"
+    },
+    "required": {
+      "email": "Le champ email est obligatoire",
+      "lastname": "Le champs nom est obligatoire",
+      "name": "Le champs pr\u00e9nom est obligatoire",
+      "password": "Le champs mot de passe est obligatoire"
+    }
+  },
+  "favoris": {
+    "title": "Project Favoris"
+  },
+  "forgot": {
+    "description": "Pour r\u00e9initialiser votre mot de passe, veuillez remplir les champs ci-dessous.",
+    "no_account": "Je n'ai pas de compte !",
+    "send_email": "Envoyer un email",
+    "sign_up": "Cr\u00e9er un compte",
+    "want_to_log": "Je veux me connecter !"
+  },
+  "form": {
+    "confirm_password": "Confirmation de mot de passe",
+    "email": "Adresse Mail",
+    "firstname": "Pr\u00e9nom",
+    "lastname": "Nom de famille",
+    "password": "Mot de passe",
+    "submit": "S'inscrire"
+  },
+  "general": {
+    "associations": "Associations",
+    "projets": "Projets"
+  },
+  "home": {
+    "asso_check": "Nos associations sont v\u00e9rifi\u00e9es, nous mettons un point d'honneur sur leurs transparences. Voici celles du moment !",
+    "asso_description": "Nous mettons \u00e9galement en avant des associations qui n\u00e9cessitent vos dons ! Chaque association est v\u00e9rifi\u00e9e et nous leur demandons de régulièrement enregistrer les actions r\u00e9alis\u00e9es gr\u00e2ce \u00e0 vos dons.",
+    "crowdfunding": "Le Crowdfunding par",
+    "description": "Fundy, la premi\u00e8re application qui rétablit le lien de confiance entre donateurs et porteurs de projets",
+    "link_account": "Lier votre Compte Bancaire",
+    "link_account_description": "En liant votre compte bancaire nous pourrons appliquer un arrondi sur vos transactions, voici une vidéo tuto si vous ne savez pas comment faire !",
+    "no_project_found": "Aucun projet n'a \u00e9t\u00e9 trouv\u00e9",
+    "objectif :": "Notre objectif : est de maximiser le financement des projets participatifs, tout en cr\u00e9ant un lien de confiance entre les donateurs et les cr\u00e9ateurs de projets.",
+    "project_check": "Nos projets participatifs sont v\u00e9rifi\u00e9s, nous mettons un point d'honneur sur leurs transparences. Voici ceux du moment !",
+    "projet_description": "Vous retrouverez différents projets participatif vérifiés afin de les aider dans la conception et la réalisation de leurs idées ! Vous retrouverez dans le fiche indiviuel la description du projet ainsi que les actions réalisées grâce à votre participation.",
+    "rounded": "l'arrondi",
+    "we_are": "Nous c'est Fundy, un lien de confiance entre les donateurs et les porteurs de projets grâce à notre application de crowdfunding par l\u2019arrondi sur vos transactions du quotidien. Vos dons sont sécurisés et les cagnottes sont vérifiées à 100% par nos équipes. Vos dons auront un impact réel !",
+    "who_are_we": "Qu'est ce que Fundy ?"
+  },
+  "login": {
+    "description": "Pour acc\u00e9der \u00e0 votre espace Fundy, connectez-vous \u00e0 votre compte Fundy existant.",
+    "donthaveaccount": "Vous n'avez pas de compte ?",
+    "email": "Email",
+    "forgot_password": "Mot de passe oubli\u00e9 ?",
+    "no_account": "Je n'ai pas de compte !",
+    "password": "Mot de passe",
+    "register": "Cr\u00e9er un compte",
+    "signup": "Cr\u00e9er un compte",
+    "submit": "Se connecter",
+    "title": "Connexion",
+    "welcome_back": "Ravi de vous revoir !"
+  },
+  "navbar": {
+    "associations": "Associations",
+    "clearTheme": "Afficher le Th\u00e8me clair",
+    "darkTheme": "Afficher le Th\u00e8me sombre",
+    "favoris": "Favoris",
+    "home": "Accueil",
+    "logout": "D\u00e9connexion",
+    "myprofil": "Voir mon profil",
+    "profile": "Profil",
+    "projects": "Projet",
+    "seeTransactions": "Voir mes transactions",
+    "seeDonations": "Voir mes dons",
+    "settings": "Param\u00e8tres",
+    "wallet": "Portefeuille"
+  },
+  "register": {
+    "already_have_an_account": "Vous avez d\u00e9j\u00e0 un compte ?",
+    "alreadyhaveaccount": "Vous avez d\u00e9j\u00e0 un compte ?",
+    "description": "Pour acc\u00e9der \u00e0 votre espace Fundy, cr\u00e9ez votre compte Fundy.",
+    "email": "Email",
+    "firstname": "Pr\u00e9nom",
+    "lastname": "Nom de famille",
+    "login": "Se connecter",
+    "password": "Mot de passe",
+    "password_confirmation": "Confirmation du mot de passe",
+    "submit": "Cr\u00e9er un compte",
+    "title": "Cr\u00e9er un compte",
+    "welcome": "Bienvenue !"
+  },
+  "success": {
+    "login": "Vous \u00eates connect\u00e9"
+  },
+  "transaction": {
+    "bank_account": "Compte Bancaire",
+    "no_transaction_yet": "Vous n'avez pas encore fait de transaction !",
+    "number": "Total : ",
+    "on_transaction": "Sur une transaction de :",
+    "round": "Arrondi",
+    "status": "Status",
+    "title": "Mes transactions",
+    "total_amount": "Montant Total",
+    "transactions": "transactions"
+  },
+  "donation": {
+    "bank_account": "Compte Bancaire",
+    "no_transaction_yet": "Vous n'avez pas encore fait de dons !",
+    "number": "Total : ",
+    "on_transaction": "Sur une transaction de :",
+    "round": "Arrondi",
+    "status": "Status",
+    "title": "Mes dons",
+    "total_amount": "Montant Total",
+    "donations": "dons"
+  }
+}
